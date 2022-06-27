@@ -1,49 +1,49 @@
-var winston = require('winston');
+const winston = require("winston");
 
-var LoggerUtil = {};
+const LoggerUtil = {};
 
-var logger = winston.createLogger({
+const logger = winston.createLogger({
   format: winston.format.combine(
     winston.format.colorize({
-        all: true
+      all: true
     }),
     winston.format.printf(
-        data => `${data.level} : ${data.message}`
+      data => `${data.level} : ${data.message}`
     )
   ),
   transports: [
     new winston.transports.Console({
-      level: 'silly'
+      level: "silly"
     }),
     new winston.transports.File({
-      level: 'silly',
-      filename: './log/ServerData.log'
+      level: "silly",
+      filename: "./log/ServerData.log"
     })
   ]
 });
 
 LoggerUtil.silly = (message) => {
-  logger.log('silly', message);
-}
+  logger.log("silly", message);
+};
 
 LoggerUtil.debug = (message) => {
-  logger.log('debug', message);
-}
+  logger.log("debug", message);
+};
 
 LoggerUtil.verbose = (message) => {
-  logger.log('verbose', message);
-}
+  logger.log("verbose", message);
+};
 
 LoggerUtil.info = (message) => {
-  logger.log('info', message);
-}
+  logger.log("info", message);
+};
 
 LoggerUtil.warn = (message) => {
-  logger.log('warn', message);
-}
+  logger.log("warn", message);
+};
 
 LoggerUtil.error = (message) => {
-  logger.log('error', message);
-}
+  logger.log("error", message);
+};
 
 module.exports = LoggerUtil;

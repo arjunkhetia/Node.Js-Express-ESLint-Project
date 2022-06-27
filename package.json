@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "lint-report": "eslint . -f node_modules/eslint-detailed-reporter/lib/detailed.js -o lint-report/report.html"
   },
   "dependencies": {
     "compression": "^1.7.4",
@@ -25,6 +28,12 @@
     "winston": "^3.8.0"
   },
   "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-detailed-reporter": "^0.9.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.3",
+    "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^2.0.18"
   }
 }

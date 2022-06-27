@@ -25,6 +25,34 @@ Start Express.js app at `http://localhost:3000/`:
 $ npm start
 ```
 
+# ESLint
+
+ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. Also integrated the eslint-detailed-reporter - A Detailed HTML reporter for ESLint based on the code written for eslint's default HTML reporter.
+
+```js
+"scripts": {
+  "lint": "eslint .",
+  "lint-fix": "eslint --fix .",
+  "lint-report": "eslint . -f node_modules/eslint-detailed-reporter/lib/detailed.js -o lint-report/report.html"
+}
+```
+
+### ESLint Report (Errors)
+
+![Report - 1](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/main/public/report-1.png "Report - 1")
+
+### Error expanded (Summary Mode)
+
+![Report - 2](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/main/public/report-2.png "Report - 2")
+
+### Error expanded (SourceCode Mode)
+
+![Report - 3](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/main/public/report-3.png "Report - 3")
+
+### ESLint Report (Success)
+
+![Report - 4](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/main/public/report-4.png "Report - 4")
+
 # Nodemon
 
 Nodemon will watch the files in the directory in which nodemon was started, and if any files change, nodemon will automatically restart your node application.
@@ -163,7 +191,7 @@ app.use(require('express-status-monitor')({
 }));
 ```
 
-![Monitoring Page](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/master/public/status-monitor.png "Monitoring Page")
+![Monitoring Page](https://github.com/arjunkhetia/Node.Js-Express-ESLint-Project/blob/main/public/status-monitor.png "Monitoring Page")
 
 [version-image]: https://img.shields.io/badge/Version-1.0.0-orange.svg
 [linuxbuild-image]: https://img.shields.io/badge/Linux-passing-brightgreen.svg
